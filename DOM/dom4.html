@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 4</title>
+</head>
+<body style="background-color: black; color: white;">
+
+    <ul class="language">
+        <li>JavaScript</li>
+
+    </ul>
+    <script>
+     function addLangauge(LangName){
+        const li=document.createElement('li')
+        li.innerHTML=`${LangName}`
+        document.querySelector('.language').appendChild(li)
+     }
+     addLangauge("python");
+     addLangauge("C++");
+     addLangauge("ruby");
+
+     function addOptimalLanguage(langName){
+      const  li=document.createElement('li');
+       li.appendChild(document.createTextNode(langName))
+       document.querySelector('.language').appendChild(li)
+
+     }
+     addOptimalLanguage('Golang')
+
+     //edit
+     document.querySelector("li:nth-child(2)").innerHTML="C"
+      const newLang=document.createElement('li')
+      newLang.textContent="Mojo"
+      document.querySelector("li:nth-child(2)").replaceWith(newLang)
+  //remobve
+ const lastLang=document.querySelector('li:last-child')
+ lastLang.remove()
+
+    </script>
+</body>
+</html>
